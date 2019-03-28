@@ -1,0 +1,138 @@
+
+
+body {
+	margin:0;
+	padding:0;
+	font-size: 16px;
+}
+
+/*img {
+	width: 350px;
+	height: 300px;
+}*/
+
+/* Container */
+.grid-wrap {
+	align-content: center;
+	justify-content:center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 10px;
+	
+}
+
+/* Article / Zone */
+.zone {
+	padding: 20px;
+	margin: 5px;
+	width: auto ;
+	height: 500px;
+	border-radius: 5px;
+	/*border: 1px solid black;
+	background-color: #f2f3f4;*/
+}
+
+.float-box {
+	display: flex;
+	flex-wrap: wrap;
+	float: left;
+	align-content: center;
+	justify-content: center;
+	
+}
+
+/* Possibly change the display of the div surrounding the article content
+during window size change. */
+
+.box > img {
+	height: 100%;
+	width: 100%;
+
+}
+
+.box {
+	order: 2;
+	margin: 23px;
+	padding: 7px;
+}
+
+.zone-text {
+	order: 3;
+	width: 100%;
+	height: 200px;
+	overflow: auto;
+}
+
+
+.zone-heading {
+	order: 1;
+	font-size: 25px;
+	font-weight: bold;
+	margin:0;
+
+}
+
+/* Footer */
+footer {
+	display:flex;
+	width:100%;
+	align-content:center;
+	justify-content:center;
+	background-color:#5d8aa8;
+}
+
+.footerText {
+	font-size: 25px;
+	font-weight:bold;
+}
+.smallText {
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 720px) {
+
+	.grid-wrap {
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	grid-gap: 20px;
+	
+	}
+
+	.float-box {
+		flex-wrap: nowrap;
+	}
+
+	.zone {
+		width: 95%;
+		height: 300px;
+	}
+	.zone-heading {
+		order: 2;
+		font-size: 20px;
+		margin: 5px;
+		align-items: center;
+	}
+	.box > img {
+		height: auto;
+		width: 80%;
+	}
+	.box {
+	order: 1;
+	margin: auto;
+	padding: auto;
+	background-color: transparent;
+	}
+	.zone-text {
+		height: 300px;
+		margin-left: 15px;
+	}
+	
+}
+
+
+
+
